@@ -1,0 +1,20 @@
+Edit Restaurant!
+<br></br>
+
+<form id='editRestaurant'>
+      <input name='restaurantID' id= 'restaurantID' type='hidden' value='{{restaurantID}}'
+      <label for="name">Name</label>
+      <br>
+      <input type="text" id="name" name="name" required placeholder="Enter Name"> 
+      <br>
+      <label>Image Link</label>
+      <br>
+      <input type="text" id="imagelink" name="imagelink" required placeholder="Enter Image Link"> 
+      <br>
+      <input type="submit" text="Submit">
+</form>
+
+<script>
+      const editRestaurant = document.querySelector('#editRestaurant')
+      editRestaurant.addEventListener("submit", updateRestaurant)
+</script>
