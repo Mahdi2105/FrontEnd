@@ -7,7 +7,10 @@ const {
 } = require("./sequelize_connect");
 const express = require("express");
 const app = express();
-const port = 3010;
+const port = 3005;
+const cors = require('cors');
+
+app.use(cors());
 
 // support req.body parsing
 app.use(express.json());
@@ -78,7 +81,7 @@ app.delete("/api/restaurants/:id", async (req, res) => {
       },
     });
     // 200 = success
-    res.status(200).send(deleteR_ID);
+    res.status(200).send();
   } catch (e) {
     res.status(400).send(e.message);
   }
@@ -148,7 +151,7 @@ app.delete("/api/menus/:id", async (req, res) => {
       },
     });
     // 200 = success
-    res.status(200).send(deleteM_ID);
+    res.status(200).send();
   } catch (e) {
     res.status(400).send(e.message);
   }
@@ -218,7 +221,7 @@ app.delete("/api/menuItems/:id", async (req, res) => {
       },
     });
     // 200 = success
-    res.status(200).send(deleteMI_ID);
+    res.status(200).send();
   } catch (e) {
     res.status(400).send(e.message);
   }
