@@ -1,0 +1,9 @@
+<div class="menu-block">
+  {{#if menus.length }}
+    {{#each menus }}
+      {{> menuTemplate this }}
+    {{/each}}
+  {{else}}
+    <p>No menus left :(</p>
+  {{/if}}
+</div>
