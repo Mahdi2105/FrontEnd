@@ -42,6 +42,6 @@ async function updateRestaurant(event) {
 
   if (response.ok) {
     window.location = '/restaurants';
-}
+  }
 
 }
