@@ -40,6 +40,8 @@ async function updateRestaurant(event) {
   //make fetch request to PUT
 
 
-  console.log(data)
+  if (response.ok) {
+    window.location = '/restaurants';
+}
 
 }
